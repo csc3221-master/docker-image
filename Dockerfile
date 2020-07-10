@@ -22,7 +22,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 
 
 # Expose port 22 to allow connection from CLion
-EXPOSE 22
+EXPOSE 3000
 
 # Create a user to access through SSH from CLion
 RUN useradd -m $user && echo "$user:$user" | chpasswd && adduser $user sudo
